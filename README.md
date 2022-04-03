@@ -24,7 +24,7 @@ The smart contract deploys one billion PSTR tokens to the following wallets whic
 
 # Vesting Allocations and Terms
 - **5% Seed:** 5% unlocked at the PSTR Token Generation Event (TGE) with a one-month cliff followed by twelve months of external and linear (per block) unlock.
-- **21% Team and Advisors:** Locked for 180 days outright followed by 5% of unlock once every 30 days.  
+- **21% Team and Advisors:** Locked for 180 days outright followed by 2.5% of unlock once every 30 days.  
 
 
 ## $ npx hardhat test
