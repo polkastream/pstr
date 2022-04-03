@@ -12,7 +12,7 @@ As an added token security and stability feature, PSTR has a limit of one millio
 
 # Wallet Distributions
 The smart contract deploys one billion PSTR tokens to the following wallets which are excluded from paying fees, receiving dividends, and per transaction limit.
-- **16% Initial Dex Offering (IDO)**: [will provide at a later time.]
+- **16% Initial Dex Offering (IDO)**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
 - **26% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
 - **10% Liquidity:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
 - **25% Rewards:** 0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea
