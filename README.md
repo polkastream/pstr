@@ -12,8 +12,8 @@ As an added token security and stability feature, PSTR has a limit of one millio
 
 # Wallet Distributions
 The smart contract deploys one billion PSTR tokens to the following wallets which are excluded from paying fees, receiving dividends, and per transaction limit.
-- **16% Initial Dex Offering (IDO)**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
-- **26% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
+- **11% Initial Dex Offering (IDO)**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
+- **31% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
 - **10% Liquidity:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
 - **25% Rewards:** 0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea
 - **17% Operations and Marketing:** 0x37ECAaFBc289dA731B81c81A4454B108beD425a4  
@@ -23,6 +23,7 @@ The smart contract deploys one billion PSTR tokens to the following wallets whic
 
 # Vesting Allocations and Terms
 - **5% Seed:** 5% unlocked at the PSTR Token Generation Event (TGE) with a one-month cliff followed by twelve months of external and linear (per block) unlock.
+- **5% Seed:** 10% unlocked at TGE with a one-month cliff followed by ten months of external and linear unlock.
 - **21% Team and Advisors:** Locked for 180 days outright followed by 2.5% of unlock once every 30 days.  
 
 
