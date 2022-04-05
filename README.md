@@ -8,12 +8,12 @@ As an added token security and stability feature, PSTR has a limit of one millio
 
 
 # Allocations
-![Chart](https://user-images.githubusercontent.com/91648013/161676310-a0758b13-0d06-46d1-b8eb-0ebd126216ee.png)
+![Chart](https://user-images.githubusercontent.com/91648013/161677470-f65ef0e0-8fb6-427d-ba85-1f3fa55a9ede.png)
 
 
 # Wallet Distributions
 The smart contract deploys one billion PSTR tokens to the following wallets which are excluded from paying fees, receiving dividends, and per transaction limit.
-- **11% Launchpad(s)**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
+- **11% IDO Platform(s)**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
 - **31% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
 - **10% Liquidity:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
 - **25% Rewards:** 0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea
