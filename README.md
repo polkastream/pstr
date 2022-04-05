@@ -8,7 +8,8 @@ As an added token security and stability feature, PSTR has a limit of one millio
 
 
 # Allocations
-![Chart](https://user-images.githubusercontent.com/91648013/161673519-7e0bb330-d870-4c12-af92-c5525737293b.png)
+![Chart](https://user-images.githubusercontent.com/91648013/161673634-aeabaed2-8bed-474b-a3df-8992b3dfcddc.png)
+
 
 # Wallet Distributions
 The smart contract deploys one billion PSTR tokens to the following wallets which are excluded from paying fees, receiving dividends, and per transaction limit.
