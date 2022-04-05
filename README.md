@@ -8,7 +8,7 @@ As an added token security and stability feature, PSTR has a limit of one millio
 
 
 # Allocations
-![Chart](https://user-images.githubusercontent.com/91648013/161677470-f65ef0e0-8fb6-427d-ba85-1f3fa55a9ede.png)
+![Chart](https://user-images.githubusercontent.com/91648013/161815717-95eecc5f-734c-4c5f-adfe-be87ba5049be.png)
 
 
 # Wallet Distributions
@@ -23,8 +23,8 @@ The smart contract deploys one billion PSTR tokens to the following wallets whic
 
 
 # Vesting Allocations and Terms
-- **5% Pre-Seed:** 5% unlocked at the PSTR Token Generation Event (TGE) with a one-month cliff followed by twelve months of external and linear (per block) unlock.
-- **5% Seed:** 10% unlocked at TGE with a one-month cliff followed by eleven months of external and linear unlock.
+- **5% Seed:** 5% unlocked at the PSTR Token Generation Event (TGE) with a one-month cliff followed by twelve months of external and linear (per block) unlock.
+- **5% Strategic:** 10% unlocked at TGE with a one-month cliff followed by eleven months of external and linear unlock.
 - **21% Team and Advisors:** Locked for 180 days outright followed by 2.5% of unlock once every 30 days.  
 
 
