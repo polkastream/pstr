@@ -1,7 +1,7 @@
 # Tokenomics
 PSTR is minted off Binance Smart Chain (BSC) With a maximum supply of one billion (1,000,000,000) tokens. 
 
-For passive income, PSTR is built-in with Automated Rewards Farming (ARF) to include:
+For passive income, PSTR is built in with Automated Rewards Farming (ARF) to include:
 
 - A 4% fee is automatically applied to all transactions. 3% of that fee is distributed to holders and the remaining 1%, up to 50% of the max supply, is permanently burned.
 - After the 50% supply is burned, the fee reverts to 4% with all of it distributed to holders and 0% burned. 
