@@ -10,7 +10,7 @@ As an added token security and stability feature, PSTR has a limit of one millio
 
 
 # Allocations
-![Chart](https://user-images.githubusercontent.com/91648013/167249065-e24c4148-6511-416b-b618-dfc47eb98379.png)
+![Chart](https://user-images.githubusercontent.com/91648013/167249141-72f4471a-6485-4df6-ba70-8851319ac1fc.png)
 
 
 # Wallet Distributions
