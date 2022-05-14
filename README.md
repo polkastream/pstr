@@ -15,9 +15,9 @@ As an added token security and stability feature, PSTR has a limit of one millio
 
 # Wallet Distributions
 The smart contract deploys one billion PSTR tokens to the following wallets which are excluded from paying fees, receiving dividends, and per transaction limit.
-- **4% Public Sale**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
+- **4% Public**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
 - **38% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
-- **10% Liquidity Pool:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
+- **10% Liquidity:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
 - **25% Rewards:** 0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea
 - **17% Operations and Marketing:** 0x37ECAaFBc289dA731B81c81A4454B108beD425a4  
 - **4% Community:** 0xf353B8Bb584c75900090e7F5e4309706e79d5385
@@ -25,8 +25,8 @@ The smart contract deploys one billion PSTR tokens to the following wallets whic
 
 
 # Vested Allocations and Terms
-- **10% Seed Funding:** 5% of the total allocation is unlocked during the $PSTR Token Generation Event (TGE) with a one-month cliff, followed by twelve months of external and linear (per block) unlock.
-- **7% Private Sale:** 10% of the total allocation is unlocked during TGE with a one-month cliff, followed by eleven months of external and linear unlock.
+- **10% Seed:** 5% of the total allocation is unlocked during the $PSTR Token Generation Event (TGE) with a one-month cliff, followed by twelve months of external and linear (per block) unlock.
+- **7% Private:** 10% of the total allocation is unlocked during TGE with a one-month cliff, followed by eleven months of external and linear unlock.
 - **21% Team and Advisors:** All of the tokens are locked for 180 days outright, followed by 2.5% of the total allocation unlocking once every 30 days.  
 
 
