@@ -24,7 +24,7 @@ The smart contract deploys one billion PSTR tokens to the following wallets whic
 - **2% Charity:** 0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee
 
 
-# Vested Allocations and Terms
+# Vesting Contract Allocations and Terms
 - **10% Seed:** *x% of the total allocation is unlocked during the $PSTR Token Generation Event (TGE) with a y-month cliff, followed by z months of external and linear (per block) unlock.
 - **10% Private:** x% of the total allocation is unlocked during TGE with a y-month cliff, followed by z months of external and linear unlock.
 - **22% Team and Advisors:** All of the tokens are locked for x days outright, followed by y% of the total allocation unlocking once every z days.  
