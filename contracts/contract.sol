@@ -159,6 +159,7 @@ contract Polkastream is IERC20, Ownable {
     mapping (address => bool) private _isExcludedFromMaxTxLimit;
     mapping (address => bool) private _isExcludedFromFee;
     mapping (address => bool) private _isExcluded;
+    mapping (address => bool) private _isBlacklisted;
     address[] private _excluded;
 
     address public constant BURN_ADDRESS = 0x000000000000000000000000000000000000dEaD;
@@ -333,7 +334,7 @@ contract Polkastream is IERC20, Ownable {
     }
     
     function includeInMaxTxLimit(address account) public onlyOwner() {
-        require(!_isExcludedFromMaxTxLimit[account], "Account is already excluded");
+        require(_isExcludedFromMaxTxLimit[account], "Account is already included");
         _isExcludedFromMaxTxLimit[account] = false;
     }
 
@@ -341,6 +342,16 @@ contract Polkastream is IERC20, Ownable {
         excludeFromReward(account);
         excludeFromFee(account);
         excludeFromMaxTxLimit(account);
+    }
+
+    function addInBlacklist(address account) public onlyOwner() {
+        require(!_isBlacklisted[account], "Account is already added");
+        _isBlacklisted[account] = true;
+    }
+
+    function removeFromBlacklist(address account) public onlyOwner() {
+        require(_isBlacklisted[account], "Account is already removed");
+        _isBlacklisted[account] = false;
     }
 
     function setMaxTransactionLimit(uint256 newLimit) external onlyOwner() {
@@ -435,7 +446,7 @@ contract Polkastream is IERC20, Ownable {
     ) private {
         require(from != address(0), "ERC20: transfer from the zero address");
         require(to != address(0), "ERC20: transfer to the zero address");
-        require(amount > 0, "ERC20: Transfer amount must be positive");
+        require(!_isBlacklisted[from], "Polkastream: transfer from blacklisted address");
         require(amount <= _maxTxLimit || _isExcludedFromMaxTxLimit[from], "Polkastream: Transfer amount exceeds limit");
 
         //indicates if fee should be deducted from transfer
