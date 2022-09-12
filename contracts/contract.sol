@@ -163,15 +163,14 @@ contract Polkastream is IERC20, Ownable {
 
     address public constant BURN_ADDRESS = 0x000000000000000000000000000000000000dEaD;
     uint256 private constant _tTotal = 1000 * 10**6 * 10**18; // 1 Billion
-    uint256 private constant LOCK_DURATION = 180 days;
 
     // Polkastream wallet addresses
-    address public constant PRIVATE_SALE = 0x0F18A35beee3604bDAa28A45e299d166f037116A;
-    address public constant PUBLIC_SALE = 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F;
-    address public constant COMMUNITY_GRANTS = 0xf353B8Bb584c75900090e7F5e4309706e79d5385;
+    address public constant VESTING_CONTRACT = 0x0beF5f7E292fB8523256415941D097Aa479C1BA7;
+    address public constant PUBLIC_SALE = 0x0F18A35beee3604bDAa28A45e299d166f037116A;
+    address public constant LIQUIDITY_POOL = 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F;
     address public constant REWARDS = 0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea;
-    address public constant OPERATIONS = 0x37ECAaFBc289dA731B81c81A4454B108beD425a4;
-    address public constant TEAM_AND_ADVISORS = 0x0beF5f7E292fB8523256415941D097Aa479C1BA7;
+    address public constant OPS_AND_MKTG = 0x37ECAaFBc289dA731B81c81A4454B108beD425a4;
+    address public constant COMMUNITY = 0xf353B8Bb584c75900090e7F5e4309706e79d5385;
     address public constant CHARITY = 0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee;
 
     uint256 private _rTotal = (~uint256(0) - (~uint256(0) % _tTotal));
@@ -183,16 +182,9 @@ contract Polkastream is IERC20, Ownable {
     uint256 private _previousTaxFee = _taxFee;
     uint256 private _previousBurnFee = _burnFee;
 
-    uint256 private _maxTxLimit = 50 * 10**6 * 10**18; // 50 Million per transaction limit
-
-    uint256 public immutable TEAM_UNLOCK_TIMESTAMP;
-    uint256 public reward_unlock_timestamp;
-    uint256 public team_vested_amount_transferred;
+    uint256 private _maxTxLimit = 1 * 10**6 * 10**18; // 1 Million per transaction limit
 
     constructor () {
-
-        TEAM_UNLOCK_TIMESTAMP = block.timestamp + LOCK_DURATION;
-        reward_unlock_timestamp = block.timestamp + LOCK_DURATION;
 
         // temporarily assign the total supply to self
         _rOwned[address(this)] = _rTotal;
@@ -202,21 +194,21 @@ contract Polkastream is IERC20, Ownable {
         //  - paying fees
         //  - receiving dividends
         //  - transaction limits
-        excludeFromAll(PRIVATE_SALE);
+        excludeFromAll(VESTING_CONTRACT);
         excludeFromAll(PUBLIC_SALE);
-        excludeFromAll(COMMUNITY_GRANTS);
+        excludeFromAll(LIQUIDITY_POOL);
         excludeFromAll(REWARDS);
-        excludeFromAll(OPERATIONS);
-        excludeFromAll(TEAM_AND_ADVISORS);
+        excludeFromAll(OPS_AND_MKTG);
+        excludeFromAll(COMMUNITY);
         excludeFromAll(CHARITY);
 
-        _tokenTransfer(address(this), PRIVATE_SALE, _tTotal * 5 / 100, false);        // 05% of the total supply
-        _tokenTransfer(address(this), PUBLIC_SALE, _tTotal * 30 / 100, false);        // 30% of the total supply
-        _tokenTransfer(address(this), COMMUNITY_GRANTS, _tTotal * 6 / 100, false);    // 06% of the total supply
-        _tokenTransfer(address(this), REWARDS, _tTotal * 25 / 100, false);            // 25% of the total supply
-        _tokenTransfer(address(this), OPERATIONS, _tTotal * 12 / 100, false);         // 12% of the total supply
-        _tokenTransfer(address(this), TEAM_AND_ADVISORS, _tTotal * 20 / 100, false);  // 20% of the total supply
-        _tokenTransfer(address(this), CHARITY, _tTotal * 2 / 100, false);             // 02% of the total supply
+        _tokenTransfer(address(this), VESTING_CONTRACT, _tTotal * 42 / 100, false); // 42% of the total supply
+        _tokenTransfer(address(this), PUBLIC_SALE, _tTotal * 4 / 100, false);       // 4% of the total supply
+        _tokenTransfer(address(this), LIQUIDITY_POOL, _tTotal * 3 / 100, false);    // 3% of the total supply
+        _tokenTransfer(address(this), REWARDS, _tTotal * 25 / 100, false);          // 25% of the total supply
+        _tokenTransfer(address(this), OPS_AND_MKTG, _tTotal * 20 / 100, false);     // 20% of the total supply
+        _tokenTransfer(address(this), COMMUNITY, _tTotal * 4 / 100, false);         // 4% of the total supply
+        _tokenTransfer(address(this), CHARITY, _tTotal * 2 / 100, false);           // 2% of the total supply
     }
 
     function name() public pure returns (string memory) {
@@ -301,25 +293,6 @@ contract Polkastream is IERC20, Ownable {
         require(rAmount <= _rTotal, "Amount must be less than total reflections");
         uint256 currentRate =  _getRate();
         return rAmount / currentRate;
-    }
-
-    function isTeamTokensUnlocked() public view returns (bool) {
-        return block.timestamp >= TEAM_UNLOCK_TIMESTAMP;
-    }
-
-    function isRewardTokensUnlocked() public view returns (bool) {
-        return block.timestamp >= reward_unlock_timestamp;
-    }
-
-    // Returns the amount of available vested tokens from the team & advisors wallet
-    function totalTeamTokensAvailable() public view returns(uint256) {
-        if(block.timestamp < TEAM_UNLOCK_TIMESTAMP) {
-            return 0;
-        }
-
-        uint256 teamShare = _tTotal/5;
-        uint256 monthsElapsed = (block.timestamp - TEAM_UNLOCK_TIMESTAMP) / 30 days;
-        return (teamShare * monthsElapsed / 20) - team_vested_amount_transferred;
     }
 
     function excludeFromReward(address account) public onlyOwner() {
@@ -432,22 +405,6 @@ contract Polkastream is IERC20, Ownable {
         return (_taxFee + _burnFee, 0);
     }
 
-    function _checkVesting(address from, uint256 amount) internal {
-
-        // If the sender is the team & advisors wallet, ensure that the transfer does not exceed available vested tokens
-        // Update the number of vested tokens that have been sent
-        if(from == TEAM_AND_ADVISORS) {
-            require(isTeamTokensUnlocked(), "Polkastream: Team tokens are locked");
-            require(amount <= totalTeamTokensAvailable(), "Polkastream: Transfers exceeds amount vested");
-            team_vested_amount_transferred += amount;
-        }
-
-        // If the sender is the rewards wallet, ensure that the token locking period has elapsed
-        if(from == REWARDS) {
-            require(isRewardTokensUnlocked(), "Polkastream: Reward tokens are locked");
-        }
-    }
-
     function _removeAllFee() private {
         if(_taxFee == 0 && _burnFee == 0) return;
 
@@ -481,7 +438,6 @@ contract Polkastream is IERC20, Ownable {
         require(amount > 0, "ERC20: Transfer amount must be positive");
         require(amount <= _maxTxLimit || _isExcludedFromMaxTxLimit[from], "Polkastream: Transfer amount exceeds limit");
 
-        _checkVesting(from, amount);
         //indicates if fee should be deducted from transfer
         bool takeFee = true;
 
