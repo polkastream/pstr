@@ -5,6 +5,10 @@ async function advanceTimestampTo(timeStamp) {
 	await ethers.provider.send("evm_mine", [])
 }
 
+async function mineABlock() {
+	await ethers.provider.send("evm_mine", [])
+}
+
 async function getSignerOf(from) {
     await ethers.provider.send("hardhat_impersonateAccount", [from]);
     const impersonatedAccount = await ethers.provider.getSigner(from);
@@ -41,13 +45,21 @@ describe("Polkastream contract", function () {
 	let addr2;
 	let addrs;
 
-	let privatesale_wallet = "0x0F18A35beee3604bDAa28A45e299d166f037116A";
-	let publicsale_wallet = "0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F";
-	let communitygrants_wallet = "0xf353B8Bb584c75900090e7F5e4309706e79d5385";
-	let rewards_wallet = "0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea";
-	let operations_wallet = "0x37ECAaFBc289dA731B81c81A4454B108beD425a4";
-	let teamandadvisors_wallet = "0x0beF5f7E292fB8523256415941D097Aa479C1BA7";
-	let charity_wallet = "0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee";
+	// let privatesale_wallet = "0x0F18A35beee3604bDAa28A45e299d166f037116A";
+	// let publicsale_wallet = "0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F";
+	// let communitygrants_wallet = "0xf353B8Bb584c75900090e7F5e4309706e79d5385";
+	// let rewards_wallet = "0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea";
+	// let operations_wallet = "0x37ECAaFBc289dA731B81c81A4454B108beD425a4";
+	// let teamandadvisors_wallet = "0x0beF5f7E292fB8523256415941D097Aa479C1BA7";
+	// let charity_wallet = "0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee";
+
+	let vesting_contract_wallet = "0x0beF5f7E292fB8523256415941D097Aa479C1BA7";
+    let public_sale_wallet = "0x0F18A35beee3604bDAa28A45e299d166f037116A";
+    let liquidity_pool_wallet = "0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F";
+    let rewards_wallet = "0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea";
+    let ops_and_mktg_wallet = "0x37ECAaFBc289dA731B81c81A4454B108beD425a4";
+    let community_wallet = "0xf353B8Bb584c75900090e7F5e4309706e79d5385";
+    let charity_wallet = "0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee";
 
 	let actualTotalSupply = ethers.utils.parseEther("1000000000");
 
@@ -57,12 +69,12 @@ describe("Polkastream contract", function () {
 		PolkastreamFactory = await ethers.getContractFactory("Polkastream");
 		Polkastream = await PolkastreamFactory.deploy();
 
-		await owner.sendTransaction({to: privatesale_wallet, value: ethers.utils.parseEther("1.0")});
-		await owner.sendTransaction({to: publicsale_wallet, value: ethers.utils.parseEther("1.0")});
-		await owner.sendTransaction({to: communitygrants_wallet, value: ethers.utils.parseEther("1.0")});
+		await owner.sendTransaction({to: vesting_contract_wallet, value: ethers.utils.parseEther("1.0")});
+		await owner.sendTransaction({to: public_sale_wallet, value: ethers.utils.parseEther("1.0")});
+		await owner.sendTransaction({to: liquidity_pool_wallet, value: ethers.utils.parseEther("1.0")});
 		await owner.sendTransaction({to: rewards_wallet, value: ethers.utils.parseEther("1.0")});
-		await owner.sendTransaction({to: operations_wallet, value: ethers.utils.parseEther("1.0")});
-		await owner.sendTransaction({to: teamandadvisors_wallet, value: ethers.utils.parseEther("1.0")});
+		await owner.sendTransaction({to: ops_and_mktg_wallet, value: ethers.utils.parseEther("1.0")});
+		await owner.sendTransaction({to: community_wallet, value: ethers.utils.parseEther("1.0")});
 		await owner.sendTransaction({to: charity_wallet, value: ethers.utils.parseEther("1.0")});
 	});
 
@@ -97,97 +109,114 @@ describe("Polkastream contract", function () {
 
 		it("Should correctly distribute the total supply among wallets", async function () {
 
-			const privatesale_balance = await Polkastream.balanceOf(privatesale_wallet);
-			const publicsale_balance = await Polkastream.balanceOf(publicsale_wallet);
-			const communitygrants_balance = await Polkastream.balanceOf(communitygrants_wallet);
+			const vesting_contract_balance = await Polkastream.balanceOf(vesting_contract_wallet);
+			const public_sale_balance = await Polkastream.balanceOf(public_sale_wallet);
+			const liquidity_pool_balance = await Polkastream.balanceOf(liquidity_pool_wallet);
 			const rewards_balance = await Polkastream.balanceOf(rewards_wallet);
-			const operations_balance = await Polkastream.balanceOf(operations_wallet);
-			const teamandadvisors_balance = await Polkastream.balanceOf(teamandadvisors_wallet);
+			const ops_and_mktg_balance = await Polkastream.balanceOf(ops_and_mktg_wallet);
+			const community_balance = await Polkastream.balanceOf(community_wallet);
 			const charity_balance = await Polkastream.balanceOf(charity_wallet);
 
-			expect(actualTotalSupply.mul(5).div(100)).to.equal(privatesale_balance);
-			expect(actualTotalSupply.mul(30).div(100)).to.equal(publicsale_balance);
-			expect(actualTotalSupply.mul(6).div(100)).to.equal(communitygrants_balance);
+			expect(actualTotalSupply.mul(42).div(100)).to.equal(vesting_contract_balance);
+			expect(actualTotalSupply.mul(4).div(100)).to.equal(public_sale_balance);
+			expect(actualTotalSupply.mul(3).div(100)).to.equal(liquidity_pool_balance);
 			expect(actualTotalSupply.mul(25).div(100)).to.equal(rewards_balance);
-			expect(actualTotalSupply.mul(12).div(100)).to.equal(operations_balance);
-			expect(actualTotalSupply.mul(20).div(100)).to.equal(teamandadvisors_balance);
+			expect(actualTotalSupply.mul(20).div(100)).to.equal(ops_and_mktg_balance);
+			expect(actualTotalSupply.mul(4).div(100)).to.equal(community_balance);
 			expect(actualTotalSupply.mul(2).div(100)).to.equal(charity_balance);
 		});
 
 		it("Should exclude reserved wallets from rewards", async function () {
-			expect(true).to.equal(await Polkastream.isExcludedFromReward(privatesale_wallet));
-			expect(true).to.equal(await Polkastream.isExcludedFromReward(publicsale_wallet));
-			expect(true).to.equal(await Polkastream.isExcludedFromReward(communitygrants_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromReward(vesting_contract_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromReward(public_sale_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromReward(liquidity_pool_wallet));
 			expect(true).to.equal(await Polkastream.isExcludedFromReward(rewards_wallet));
-			expect(true).to.equal(await Polkastream.isExcludedFromReward(operations_wallet));
-			expect(true).to.equal(await Polkastream.isExcludedFromReward(teamandadvisors_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromReward(ops_and_mktg_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromReward(community_wallet));
 			expect(true).to.equal(await Polkastream.isExcludedFromReward(charity_wallet));
 		});
 
 		it("Should exclude reserved wallets from fees", async function () {
-			expect(true).to.equal(await Polkastream.isExcludedFromFee(privatesale_wallet));
-			expect(true).to.equal(await Polkastream.isExcludedFromFee(publicsale_wallet));
-			expect(true).to.equal(await Polkastream.isExcludedFromFee(communitygrants_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromFee(vesting_contract_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromFee(public_sale_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromFee(liquidity_pool_wallet));
 			expect(true).to.equal(await Polkastream.isExcludedFromFee(rewards_wallet));
-			expect(true).to.equal(await Polkastream.isExcludedFromFee(operations_wallet));
-			expect(true).to.equal(await Polkastream.isExcludedFromFee(teamandadvisors_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromFee(ops_and_mktg_wallet));
+			expect(true).to.equal(await Polkastream.isExcludedFromFee(community_wallet));
 			expect(true).to.equal(await Polkastream.isExcludedFromFee(charity_wallet));
 		});
 	});
 
 	describe("Transactions", function () {
 
+		it("Should prevent spend before going live", async function () {
+			let operationSigner = await getSignerOf(ops_and_mktg_wallet);
+			await Polkastream.connect(operationSigner).transfer(addr1.address, ethers.utils.parseEther("1000"))
+			await expect(
+				Polkastream.connect(addr1).transfer(addr2.address, ethers.utils.parseEther("1000"))
+			).to.be.revertedWith("Polkastream: PSTR not live yet");
+		});
+
 		it("Should prevent spend greater than max tx limit", async function () {
-			let operationSigner = await getSignerOf(operations_wallet);
-			await Polkastream.connect(operationSigner).transfer(addr1.address, ethers.utils.parseEther("50000001"))
+			let operationSigner = await getSignerOf(ops_and_mktg_wallet);
+			await Polkastream.connect(operationSigner).transfer(addr1.address, ethers.utils.parseEther("1000001"))
 
 			const addr1Balance = await Polkastream.balanceOf(addr1.address);
-			expect(addr1Balance).to.equal(ethers.utils.parseEther("50000001"));
+			expect(addr1Balance).to.equal(ethers.utils.parseEther("1000001"));
+
+			await Polkastream.goLive(owner.address, 2);
 
 			await expect(
-				Polkastream.connect(addr1).transfer(addr2.address, ethers.utils.parseEther("50000001"))
+				Polkastream.connect(addr1).transfer(addr2.address, ethers.utils.parseEther("1000001"))
 			).to.be.revertedWith("Polkastream: Transfer amount exceeds limit");
 		});
 
-		it("Should prevent spend from team wallet", async function () {
-			let teamSigner = await getSignerOf(teamandadvisors_wallet);
+		it("Should prevent spends from Blacklisted wallets", async function () {
+			let operationSigner = await getSignerOf(ops_and_mktg_wallet);
+			await Polkastream.addInBlacklist(ops_and_mktg_wallet);
+			await Polkastream.goLive(owner.address, 2);
+
 			await expect(
-				Polkastream.connect(teamSigner).transfer(addr1.address, 50)
-			).to.be.revertedWith("Polkastream: Team tokens are locked");
+				Polkastream.connect(operationSigner).transfer(addr2.address, ethers.utils.parseEther("1000"))
+			).to.be.revertedWith("Polkastream: transfer from blacklisted address");
 		});
 
-		it("Should prevent spend from rewards wallet", async function () {
-			let teamSigner = await getSignerOf(rewards_wallet);
+		it("Should allow spends from Non-Blacklisted wallets", async function () {
+			let operationSigner = await getSignerOf(ops_and_mktg_wallet);
+			await Polkastream.addInBlacklist(ops_and_mktg_wallet);
+			await Polkastream.goLive(owner.address, 2);
+
 			await expect(
-				Polkastream.connect(teamSigner).transfer(addr1.address, 50)
-			).to.be.revertedWith("Polkastream: Reward tokens are locked");
+				Polkastream.connect(operationSigner).transfer(addr2.address, ethers.utils.parseEther("1000"))
+			).to.be.revertedWith("Polkastream: transfer from blacklisted address");
+
+			await Polkastream.removeFromBlacklist(ops_and_mktg_wallet);
+			await Polkastream.connect(operationSigner).transfer(addr2.address, ethers.utils.parseEther("1000"));
 		});
 
-		it("Should prevent spend from team wallet after unlock, before vest", async function () {
-			await advanceTimestampTo(duration.days(181).toNumber());
-			let teamSigner = await getSignerOf(teamandadvisors_wallet);
+		it("Should blacklist buys close to going live", async function () {
+			let operationSigner = await getSignerOf(ops_and_mktg_wallet);
+			await Polkastream.goLive(ops_and_mktg_wallet, 2);
+
+			await Polkastream.connect(operationSigner).transfer(addr2.address, ethers.utils.parseEther("1000"))
+
 			await expect(
-				Polkastream.connect(teamSigner).transfer(addr1.address, 50)
-			).to.be.revertedWith("Polkastream: Transfers exceeds amount vested");
+				Polkastream.connect(addr2).transfer(addr1.address, ethers.utils.parseEther("1000"))
+			).to.be.revertedWith("Polkastream: transfer from blacklisted address");
+
+			await Polkastream.removeFromBlacklist(addr2.address);
+			await Polkastream.connect(addr2).transfer(addr1.address, ethers.utils.parseEther("1000"));
 		});
 
-		it("Should allow spend from team wallet after vest", async function () {
-			// 1st vest amount: 10000000
-			await advanceTimestampTo(duration.days(211).toNumber());
-			let teamSigner = await getSignerOf(teamandadvisors_wallet);
-			await Polkastream.connect(teamSigner).transfer(addr1.address, ethers.utils.parseEther("10000000"));
+		it("Should NOT blacklist buys NOT close to going live", async function () {
+			let operationSigner = await getSignerOf(ops_and_mktg_wallet);
+			await Polkastream.goLive(ops_and_mktg_wallet, 2);
 
-			const addr1Balance = await Polkastream.balanceOf(addr1.address);
-			expect(addr1Balance).to.equal(ethers.utils.parseEther("10000000"));
-		});
+			await mineABlock();
+			await mineABlock();
 
-		it("Should prevent spend of unvested tokens from team wallet after vest", async function () {
-			// 1st vest amount: 10000000
-			await advanceTimestampTo(duration.days(211).toNumber());
-			let teamSigner = await getSignerOf(teamandadvisors_wallet);
-			await expect(
-				Polkastream.connect(teamSigner).transfer(addr1.address, ethers.utils.parseEther("10000001"))
-			).to.be.revertedWith("Polkastream: Transfers exceeds amount vested");
+			await Polkastream.connect(operationSigner).transfer(addr2.address, ethers.utils.parseEther("1000"))
+			await Polkastream.connect(addr2).transfer(addr1.address, ethers.utils.parseEther("1000"));
 		});
 	});
 });
