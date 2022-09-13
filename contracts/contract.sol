@@ -183,7 +183,11 @@ contract Polkastream is IERC20, Ownable {
     uint256 private _previousTaxFee = _taxFee;
     uint256 private _previousBurnFee = _burnFee;
 
-    uint256 private _maxTxLimit = 1 * 10**6 * 10**18; // 1 Million per transaction limit
+    uint256 public _maxTxLimit = 1 * 10**6 * 10**18; // 1 Million per transaction limit
+    uint256 public goLiveBlock;
+    uint256 public sniperBlockDuration;
+    address public uniswapV2Pair;
+    bool public isTokenLive;
 
     constructor () {
 
@@ -332,7 +336,7 @@ contract Polkastream is IERC20, Ownable {
         require(!_isExcludedFromMaxTxLimit[account], "Account is already excluded");
         _isExcludedFromMaxTxLimit[account] = true;
     }
-    
+
     function includeInMaxTxLimit(address account) public onlyOwner() {
         require(_isExcludedFromMaxTxLimit[account], "Account is already included");
         _isExcludedFromMaxTxLimit[account] = false;
@@ -352,6 +356,14 @@ contract Polkastream is IERC20, Ownable {
     function removeFromBlacklist(address account) public onlyOwner() {
         require(_isBlacklisted[account], "Account is already removed");
         _isBlacklisted[account] = false;
+    }
+
+    function goLive(address _uniswapV2Pair, uint256 _sniperBlockDuration) external onlyOwner() {
+        require(!isTokenLive, "Polkastream: PSTR is already live");
+        isTokenLive = true;
+        goLiveBlock = block.number;
+        uniswapV2Pair = _uniswapV2Pair;
+        sniperBlockDuration = _sniperBlockDuration;
     }
 
     function setMaxTransactionLimit(uint256 newLimit) external onlyOwner() {
@@ -446,8 +458,19 @@ contract Polkastream is IERC20, Ownable {
     ) private {
         require(from != address(0), "ERC20: transfer from the zero address");
         require(to != address(0), "ERC20: transfer to the zero address");
+        require(isTokenLive || _isExcludedFromFee[from], "Polkastream: PSTR not live yet");
         require(!_isBlacklisted[from], "Polkastream: transfer from blacklisted address");
         require(amount <= _maxTxLimit || _isExcludedFromMaxTxLimit[from], "Polkastream: Transfer amount exceeds limit");
+
+        if(
+            isTokenLive &&
+            block.number < goLiveBlock + sniperBlockDuration
+            && from == uniswapV2Pair
+            && to != uniswapV2Pair
+        ) {
+            // A token buy very close to liquidity addition
+            _isBlacklisted[to] = true;
+        }
 
         //indicates if fee should be deducted from transfer
         bool takeFee = true;
