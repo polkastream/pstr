@@ -45,14 +45,6 @@ describe("Polkastream contract", function () {
 	let addr2;
 	let addrs;
 
-	// let privatesale_wallet = "0x0F18A35beee3604bDAa28A45e299d166f037116A";
-	// let publicsale_wallet = "0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F";
-	// let communitygrants_wallet = "0xf353B8Bb584c75900090e7F5e4309706e79d5385";
-	// let rewards_wallet = "0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea";
-	// let operations_wallet = "0x37ECAaFBc289dA731B81c81A4454B108beD425a4";
-	// let teamandadvisors_wallet = "0x0beF5f7E292fB8523256415941D097Aa479C1BA7";
-	// let charity_wallet = "0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee";
-
 	let vesting_contract_wallet = "0x0beF5f7E292fB8523256415941D097Aa479C1BA7";
     let public_sale_wallet = "0x0F18A35beee3604bDAa28A45e299d166f037116A";
     let liquidity_pool_wallet = "0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F";
@@ -170,7 +162,9 @@ describe("Polkastream contract", function () {
 				Polkastream.connect(addr1).transfer(addr2.address, ethers.utils.parseEther("1000001"))
 			).to.be.revertedWith("Polkastream: Transfer amount exceeds limit");
 		});
+	});
 
+	describe("Blacklist", function () {
 		it("Should prevent spends from Blacklisted wallets", async function () {
 			let operationSigner = await getSignerOf(ops_and_mktg_wallet);
 			await Polkastream.addInBlacklist(ops_and_mktg_wallet);
@@ -219,4 +213,5 @@ describe("Polkastream contract", function () {
 			await Polkastream.connect(addr2).transfer(addr1.address, ethers.utils.parseEther("1000"));
 		});
 	});
+
 });
