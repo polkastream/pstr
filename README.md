@@ -32,10 +32,25 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 
 ## $ npx hardhat test
 
-Deployment:
+```
+Polkastream contract
+    Deployment
+      √ Should set the right owner (49ms)
+      √ Should set the right name
+      √ Should set the right symbol
+      √ Should mint the total supply
+      √ Should assign 0 tokens to the owner
+      √ Should correctly distribute the total supply among wallets (50ms)
+      √ Should exclude reserved wallets from rewards (62ms)
+      √ Should exclude reserved wallets from fees (67ms)
+    Transactions
+      √ Should prevent spend before going live (207ms)
+      √ Should prevent spend greater than max tx limit (202ms)
+    Blacklist
+      √ Should prevent spends from Blacklisted wallets (84ms)
+      √ Should allow spends from Non-Blacklisted wallets (144ms)
+      √ Should blacklist buys close to going live (371ms)
+      √ Should NOT blacklist buys NOT close to going live (259ms)
 
-
-Transactions:
-
-
-x passing (ys)
+  14 passing (1m)
+```
