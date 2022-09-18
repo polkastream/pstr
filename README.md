@@ -44,11 +44,11 @@ Polkastream contract
       √ Should exclude reserved wallets from rewards (62ms)
       √ Should exclude reserved wallets from fees (67ms)
     Transactions
-      √ Should prevent spend before going live (207ms)
-      √ Should prevent spend greater than max tx limit (202ms)
+      √ Should prevent spending before going live (207ms)
+      √ Should prevent spending greater than max tx limit (202ms)
     Blacklist
-      √ Should prevent spends from Blacklisted wallets (84ms)
-      √ Should allow spends from Non-Blacklisted wallets (144ms)
+      √ Should prevent spending from Blacklisted wallets (84ms)
+      √ Should allow spending from Non-Blacklisted wallets (144ms)
       √ Should blacklist buys close to going live (371ms)
       √ Should NOT blacklist buys NOT close to going live (259ms)
 
