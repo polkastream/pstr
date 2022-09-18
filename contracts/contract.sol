@@ -7,81 +7,81 @@ pragma solidity ^0.8.17;
     3% fee distributed to all holders
     1% fee burned
 
-   After 50% suppply burned:
+   After 50% supply burned:
     4% fee distributed to all holders
 
  */
 
 /**
- * @dev Interface of the ERC20 standard as defined in the EIP.
+ * @dev Interface of the ERC20 standard as defined in the EIP
  */
 interface IERC20 {
     /**
-     * @dev Returns the amount of tokens in existence.
+     * @dev Returns the amount of tokens in existence
      */
     function totalSupply() external view returns (uint256);
 
     /**
-     * @dev Returns the amount of tokens owned by `account`.
+     * @dev Returns the amount of tokens owned by `account`
      */
     function balanceOf(address account) external view returns (uint256);
 
     /**
-     * @dev Moves `amount` tokens from the caller's account to `recipient`.
+     * @dev Moves `amount` tokens from the caller's account to `recipient`
      *
-     * Returns a boolean value indicating whether the operation succeeded.
+     * Returns a boolean value indicating whether the operation succeeded
      *
-     * Emits a {Transfer} event.
+     * Emits a {Transfer} event
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 
     /**
-     * @dev Returns the remaining number of tokens that `spender` will be
+     * @dev Returns the remaining amount of tokens that `spender` will be
      * allowed to spend on behalf of `owner` through {transferFrom}. This is
-     * zero by default.
+     * zero by default
      *
-     * This value changes when {approve} or {transferFrom} are called.
+     * This value changes when {approve} or {transferFrom} are called
      */
     function allowance(address owner, address spender) external view returns (uint256);
 
     /**
-     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
+     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens
      *
-     * Returns a boolean value indicating whether the operation succeeded.
+     * Returns a boolean value indicating whether the operation succeeded
      *
      * IMPORTANT: Beware that changing an allowance with this method brings the risk
      * that someone may use both the old and the new allowance by unfortunate
      * transaction ordering. One possible solution to mitigate this race
      * condition is to first reduce the spender's allowance to 0 and set the
-     * desired value afterwards:
+     * desired value afterward:
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
-     * Emits an {Approval} event.
+     * Emits an {Approval} event
      */
     function approve(address spender, uint256 amount) external returns (bool);
 
     /**
      * @dev Moves `amount` tokens from `sender` to `recipient` using the
      * allowance mechanism. `amount` is then deducted from the caller's
-     * allowance.
+     * allowance
      *
-     * Returns a boolean value indicating whether the operation succeeded.
+     * Returns a boolean value indicating whether the operation succeeded
      *
-     * Emits a {Transfer} event.
+     * Emits a {Transfer} event
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 
     /**
-     * @dev Emitted when `value` tokens are moved from one account (`from`) to
-     * another (`to`).
+     * @dev Emits when `value` tokens are moved from one account (`from`) to
+     * another (`to`)
      *
-     * Note that `value` may be zero.
+     * `value` may be zero
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
-     * a call to {approve}. `value` is the new allowance.
+     * @dev Emits when the allowance of a `spender` for an `owner` is set by
+     * a call to {approve}. `value` is the new allowance
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
@@ -89,14 +89,14 @@ interface IERC20 {
 /**
  * @dev Contract module which provides a basic access control mechanism, where
  * there is an account (an owner) that can be granted exclusive access to
- * specific functions.
+ * specific functions
  *
  * By default, the owner account will be the one that deploys the contract. This
- * can later be changed with {transferOwnership}.
+ * can later be changed with {transferOwnership}
  *
  * This module is used through inheritance. It will make available the modifier
- * `onlyOwner`, which can be applied to your functions to restrict their use to
- * the owner.
+ * `onlyOwner` which can be applied to functions to restrict their use to
+ * the owner
  */
 abstract contract Ownable {
     address private _owner;
@@ -104,7 +104,7 @@ abstract contract Ownable {
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
 
     /**
-     * @dev Initializes the contract setting the deployer as the initial owner.
+     * @dev Initializes the contract setting of the deployer as the initial owner
      */
     constructor () {
         _owner = msg.sender;
@@ -112,14 +112,14 @@ abstract contract Ownable {
     }
 
     /**
-     * @dev Returns the address of the current owner.
+     * @dev Returns the address of the current owner
      */
     function owner() public view virtual returns (address) {
         return _owner;
     }
 
     /**
-     * @dev Throws if called by any account other than the owner.
+     * @dev Throws if called by any account other than the owner
      */
     modifier onlyOwner() {
         require(owner() == msg.sender, "Ownable: caller is not the owner");
@@ -128,10 +128,10 @@ abstract contract Ownable {
 
     /**
      * @dev Leaves the contract without owner. It will not be possible to call
-     * `onlyOwner` functions anymore. Can only be called by the current owner.
+     * `onlyOwner` functions anymore. The current owner can only call it
      *
      * NOTE: Renouncing ownership will leave the contract without an owner,
-     * thereby removing any functionality that is only available to the owner.
+     * thereby removing any functionality that is only available to the owner
      */
     function renounceOwnership() public virtual onlyOwner() {
         emit OwnershipTransferred(_owner, address(0));
@@ -139,8 +139,8 @@ abstract contract Ownable {
     }
 
     /**
-     * @dev Transfers ownership of the contract to a new account (`newOwner`).
-     * Can only be called by the current owner.
+     * @dev Transfers contract ownership to a new account (`newOwner`).
+     * The current owner can only call it
      */
     function transferOwnership(address newOwner) public virtual onlyOwner() {
         require(newOwner != address(0), "Ownable: new owner is the zero address");
@@ -191,14 +191,14 @@ contract Polkastream is IERC20, Ownable {
 
     constructor () {
 
-        // temporarily assign the total supply to self
+        // Temporarily assigns the total supply to self
         _rOwned[address(this)] = _rTotal;
         emit Transfer(address(0), address(this), _tTotal);
 
-        // excluded all reserved wallets from:
-        //  - paying fees
-        //  - receiving dividends
-        //  - transaction limits
+        // Excludes all reserved wallets from:
+        //  - Paying fees
+        //  - Receiving dividends
+        //  - Transaction limits
         excludeFromAll(VESTING_CONTRACT);
         excludeFromAll(PUBLIC_SALE);
         excludeFromAll(LIQUIDITY_POOL);
@@ -468,19 +468,19 @@ contract Polkastream is IERC20, Ownable {
             && from == uniswapV2Pair
             && to != uniswapV2Pair
         ) {
-            // A token buy very close to liquidity addition
+            // Blacklists a token buy very close to liquidity addition
             _isBlacklisted[to] = true;
         }
 
-        //indicates if fee should be deducted from transfer
+        // Indicates if the fee should be deducted from transfer
         bool takeFee = true;
 
-        //if any account belongs to _isExcludedFromFee account then remove the fee
+        // Removes the fee if the account belongs to `_isExcludedFromFee`
         if(_isExcludedFromFee[from] || _isExcludedFromFee[to]) {
             takeFee = false;
         }
 
-        //transfer amount, it will take redistribution and burn fee
+        // Transfers amount and takes 3% redistribution and 1% burn fee
         _tokenTransfer(from, to, amount, takeFee);
     }
 
