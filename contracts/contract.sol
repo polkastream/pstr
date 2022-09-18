@@ -4,11 +4,11 @@ pragma solidity ^0.8.17;
 /**
    #Polkastream
    Initially:
-    3% fee distributed to all holders
-    1% fee burned
+    - 3% fee distributed to all holders
+    - 1% fee burned
 
    After 50% supply burned:
-    4% fee distributed to all holders
+    - 4% fee distributed to all holders
 
  */
 
