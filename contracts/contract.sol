@@ -1,160 +1,25 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.17;
+pragma solidity 0.8.17;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 /**
-   #Polkastream
-   Initially:
-    - 3% fee distributed to all holders
-    - 1% fee burned
-
-   After 50% supply burned:
-    - 4% fee distributed to all holders
-
- */
-
-/**
- * @dev Interface of the ERC20 standard as defined in the EIP
- */
-interface IERC20 {
-    /**
-     * @dev Returns the amount of tokens in existence
-     */
-    function totalSupply() external view returns (uint256);
-
-    /**
-     * @dev Returns the amount of tokens owned by `account`
-     */
-    function balanceOf(address account) external view returns (uint256);
-
-    /**
-     * @dev Moves `amount` tokens from the caller's account to `recipient`
-     *
-     * Returns a boolean value indicating whether the operation succeeded
-     *
-     * Emits a {Transfer} event
-     */
-    function transfer(address recipient, uint256 amount) external returns (bool);
-
-    /**
-     * @dev Returns the remaining amount of tokens that `spender` will be
-     * allowed to spend on behalf of `owner` through {transferFrom}. This is
-     * zero by default
-     *
-     * This value changes when {approve} or {transferFrom} are called
-     */
-    function allowance(address owner, address spender) external view returns (uint256);
-
-    /**
-     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens
-     *
-     * Returns a boolean value indicating whether the operation succeeded
-     *
-     * IMPORTANT: Beware that changing an allowance with this method brings the risk
-     * that someone may use both the old and the new allowance by unfortunate
-     * transaction ordering. One possible solution to mitigate this race
-     * condition is to first reduce the spender's allowance to 0 and set the
-     * desired value afterward:
-     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
-     *
-     * Emits an {Approval} event
-     */
-    function approve(address spender, uint256 amount) external returns (bool);
-
-    /**
-     * @dev Moves `amount` tokens from `sender` to `recipient` using the
-     * allowance mechanism. `amount` is then deducted from the caller's
-     * allowance
-     *
-     * Returns a boolean value indicating whether the operation succeeded
-     *
-     * Emits a {Transfer} event
-     */
-    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
-
-    /**
-     * @dev Emits when `value` tokens are moved from one account (`from`) to
-     * another (`to`)
-     *
-     * `value` may be zero
-     */
-    event Transfer(address indexed from, address indexed to, uint256 value);
-
-    /**
-     * @dev Emits when the allowance of a `spender` for an `owner` is set by
-     * a call to {approve}. `value` is the new allowance
-     */
-    event Approval(address indexed owner, address indexed spender, uint256 value);
-}
-
-/**
- * @dev Contract module which provides a basic access control mechanism, where
- * there is an account (an owner) that can be granted exclusive access to
- * specific functions
+ * @title Polkastream
+ * @dev Contract for the PSTR Token.
  *
- * By default, the owner account will be the one that deploys the contract. This
- * can later be changed with {transferOwnership}
- *
- * This module is used through inheritance. It will make available the modifier
- * `onlyOwner` which can be applied to functions to restrict their use to
- * the owner
+ * #Polkastream
+ * Initially:
+ *  - 3% fee distributed to all holders
+ *  - 1% fee burned
+ * After 50% supply burned:
+ *  - 4% fee distributed to all holders
  */
-abstract contract Ownable {
-    address private _owner;
-
-    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
-
-    /**
-     * @dev Initializes the contract setting of the deployer as the initial owner
-     */
-    constructor () {
-        _owner = msg.sender;
-        emit OwnershipTransferred(address(0), _owner);
-    }
-
-    /**
-     * @dev Returns the address of the current owner
-     */
-    function owner() public view virtual returns (address) {
-        return _owner;
-    }
-
-    /**
-     * @dev Throws if called by any account other than the owner
-     */
-    modifier onlyOwner() {
-        require(owner() == msg.sender, "Ownable: caller is not the owner");
-        _;
-    }
-
-    /**
-     * @dev Leaves the contract without owner. It will not be possible to call
-     * `onlyOwner` functions anymore. The current owner can only call it
-     *
-     * NOTE: Renouncing ownership will leave the contract without an owner,
-     * thereby removing any functionality that is only available to the owner
-     */
-    function renounceOwnership() public virtual onlyOwner() {
-        emit OwnershipTransferred(_owner, address(0));
-        _owner = address(0);
-    }
-
-    /**
-     * @dev Transfers contract ownership to a new account (`newOwner`).
-     * The current owner can only call it
-     */
-    function transferOwnership(address newOwner) public virtual onlyOwner() {
-        require(newOwner != address(0), "Ownable: new owner is the zero address");
-        emit OwnershipTransferred(_owner, newOwner);
-        _owner = newOwner;
-    }
-}
-
 contract Polkastream is IERC20, Ownable {
 
     mapping (address => uint256) private _rOwned;
     mapping (address => uint256) private _tOwned;
     mapping (address => mapping (address => uint256)) private _allowances;
-
 
     mapping (address => bool) private _isExcludedFromMaxTxLimit;
     mapping (address => bool) private _isExcludedFromFee;
@@ -188,6 +53,8 @@ contract Polkastream is IERC20, Ownable {
     uint256 public sniperBlockDuration;
     address public uniswapV2Pair;
     bool public isTokenLive;
+
+    event TxLimitUpdated(uint256 newLimit);
 
     constructor () {
 
@@ -242,8 +109,8 @@ contract Polkastream is IERC20, Ownable {
         return true;
     }
 
-    function allowance(address owner, address spender) public view override returns (uint256) {
-        return _allowances[owner][spender];
+    function allowance(address account, address spender) public view override returns (uint256) {
+        return _allowances[account][spender];
     }
 
     function approve(address spender, uint256 amount) public override returns (bool) {
@@ -368,6 +235,7 @@ contract Polkastream is IERC20, Ownable {
 
     function setMaxTransactionLimit(uint256 newLimit) external onlyOwner() {
         _maxTxLimit = newLimit * 10**18;
+        emit TxLimitUpdated(newLimit);
     }
 
     function _reflectFee(uint256 rFee, uint256 tFee) private {
@@ -443,12 +311,12 @@ contract Polkastream is IERC20, Ownable {
         _burnFee = _previousBurnFee;
     }
 
-    function _approve(address owner, address spender, uint256 amount) private {
-        require(owner != address(0), "ERC20: approve from the zero address");
+    function _approve(address account, address spender, uint256 amount) private {
+        require(account != address(0), "ERC20: approve from the zero address");
         require(spender != address(0), "ERC20: approve to the zero address");
 
-        _allowances[owner][spender] = amount;
-        emit Approval(owner, spender, amount);
+        _allowances[account][spender] = amount;
+        emit Approval(account, spender, amount);
     }
 
     function _transfer(
