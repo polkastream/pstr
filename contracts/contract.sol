@@ -227,6 +227,7 @@ contract Polkastream is IERC20, Ownable {
 
     function goLive(address _uniswapV2Pair, uint256 _sniperBlockDuration) external onlyOwner() {
         require(!isTokenLive, "Polkastream: PSTR is already live");
+        require(_uniswapV2Pair != address(0), "Polkastream: Cannot be the zero address");
         isTokenLive = true;
         goLiveBlock = block.number;
         uniswapV2Pair = _uniswapV2Pair;
