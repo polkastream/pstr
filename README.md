@@ -27,7 +27,7 @@ Polkastream contract
 
   14 passing (1m)
 ```
-# Successful Security and Tokenomics Audit by Solidproof.io
+# Solidproof.io Security and Tokenomics Audit
 https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf
 
 # Tokenomics
