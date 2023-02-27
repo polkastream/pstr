@@ -4,7 +4,7 @@ https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
 # Successful Security and Tokenomics Audit
 https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf
 
-[![Partnership Video](https://user-images.githubusercontent.com/91648013/221703016-3df6ec0e-df8e-407e-acd3-227a567cdbd2.png)](https://youtu.be/bEgEipxV24c)
+[![Partnership Video](![Thumbnail](https://user-images.githubusercontent.com/91648013/221703629-2e754dc3-2545-4423-8e72-787d1fc6773a.png))](https://youtu.be/bEgEipxV24c)
 
 # Tokenomics
 PSTR is minted off Binance Smart Chain (BSC) with a maximum supply of one billion (1,000,000,000) tokens. 
