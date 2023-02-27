@@ -62,4 +62,4 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 - **22% Team and Advisors:** All of the tokens are locked for x days outright, followed by y% of the total allocation unlocking once every z days.
 
 # Questions?
-Please contact us at info@polkastream.io, or join our Discord server at https://discord.gg/polkastream.
+Please get in touch with us at info@polkastream.io, or join our Discord server at https://discord.gg/polkastream.
