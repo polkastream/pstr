@@ -1,3 +1,6 @@
+
+[![Partnership Video](![Thumbnail](https://user-images.githubusercontent.com/91648013/221703629-2e754dc3-2545-4423-8e72-787d1fc6773a.png))](https://youtu.be/bEgEipxV24c)
+
 # PSTR Smart Contract Address
 https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
 
@@ -27,8 +30,6 @@ Polkastream contract
 ```
 # Successful Security and Tokenomics Audit by Solidproof.io
 https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf
-
-[![Partnership Video](![Thumbnail](https://user-images.githubusercontent.com/91648013/221703629-2e754dc3-2545-4423-8e72-787d1fc6773a.png))](https://youtu.be/bEgEipxV24c)
 
 # Tokenomics
 PSTR is minted off Binance Smart Chain (BSC) with a maximum supply of one billion (1,000,000,000) tokens. 
