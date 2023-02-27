@@ -1,7 +1,31 @@
 # PSTR Smart Contract Address
 https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
 
-# Successful Security and Tokenomics Audit
+## $ NPX Hardhat Test
+
+```
+Polkastream contract
+    Deployment
+      √ Should set the right owner (49ms)
+      √ Should set the right name
+      √ Should set the right symbol
+      √ Should mint the total supply
+      √ Should assign 0 tokens to the owner
+      √ Should correctly distribute the total supply among wallets (50ms)
+      √ Should exclude reserved wallets from rewards (62ms)
+      √ Should exclude reserved wallets from fees (67ms)
+    Transactions
+      √ Should prevent spend before going live (207ms)
+      √ Should prevent spend greater than max tx limit (202ms)
+    Blacklist
+      √ Should prevent spends from Blacklisted wallets (84ms)
+      √ Should allow spends from Non-Blacklisted wallets (144ms)
+      √ Should blacklist buys close to going live (371ms)
+      √ Should NOT blacklist buys NOT close to going live (259ms)
+
+  14 passing (1m)
+```
+# Successful Security and Tokenomics Audit by Solidproof.io
 https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf
 
 [![Partnership Video](![Thumbnail](https://user-images.githubusercontent.com/91648013/221703629-2e754dc3-2545-4423-8e72-787d1fc6773a.png))](https://youtu.be/bEgEipxV24c)
@@ -32,33 +56,7 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 - **2% Charity:** 0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee
 
 
-# Vesting Contract Allocations and Terms
+# Vesting Contract Allocations and Terms (Pending)
 - **10% Seed:** x% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a y-month cliff, followed by z months of external and linear (per block) unlock.
 - **10% Private:** x% of the total allocation is unlocked during TGE with a y-month cliff, followed by z months of external and linear unlock.
 - **22% Team and Advisors:** All of the tokens are locked for x days outright, followed by y% of the total allocation unlocking once every z days.  
-
-
-## $ npx hardhat test
-
-```
-Polkastream contract
-    Deployment
-      √ Should set the right owner (49ms)
-      √ Should set the right name
-      √ Should set the right symbol
-      √ Should mint the total supply
-      √ Should assign 0 tokens to the owner
-      √ Should correctly distribute the total supply among wallets (50ms)
-      √ Should exclude reserved wallets from rewards (62ms)
-      √ Should exclude reserved wallets from fees (67ms)
-    Transactions
-      √ Should prevent spend before going live (207ms)
-      √ Should prevent spend greater than max tx limit (202ms)
-    Blacklist
-      √ Should prevent spends from Blacklisted wallets (84ms)
-      √ Should allow spends from Non-Blacklisted wallets (144ms)
-      √ Should blacklist buys close to going live (371ms)
-      √ Should NOT blacklist buys NOT close to going live (259ms)
-
-  14 passing (1m)
-```
