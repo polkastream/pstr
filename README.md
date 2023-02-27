@@ -1,8 +1,10 @@
-# $PSTR Smart Contract Address
+# PSTR Smart Contract Address
 https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
 
 # Successful Security and Tokenomics Audit
-[https://img.youtube.com/vi/<insert-youtube-video-id-here>/0.jpg](https://youtu.be/bEgEipxV24c)
+https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf
+
+[![Partnership Video](https://user-images.githubusercontent.com/91648013/221703016-3df6ec0e-df8e-407e-acd3-227a567cdbd2.png)](https://youtu.be/bEgEipxV24c)
 
 # Tokenomics
 PSTR is minted off Binance Smart Chain (BSC) with a maximum supply of one billion (1,000,000,000) tokens. 
