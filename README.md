@@ -1,5 +1,5 @@
 #Official Smart Contract Address
-http://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
+https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
 
 # Successful $PSTR Security and Tokenomics Audit
 [![IMAGE ALT TEXT HERE]https://youtu.be/bEgEipxV24c/0.jpg)](https://youtu.be/bEgEipxV24c)
