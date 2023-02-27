@@ -1,6 +1,6 @@
 [![PSTR](https://user-images.githubusercontent.com/91648013/221707835-cf4e7df9-513b-4efe-87bc-918af7aaf73f.png)](https://youtu.be/bEgEipxV24c)
 
-# PSTR Smart Contract Address
+# Smart Contract Address
 https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
 
 # $ NPX Hardhat Test
