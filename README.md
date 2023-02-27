@@ -1,4 +1,4 @@
-[![PSTR](https://user-images.githubusercontent.com/91648013/221707835-cf4e7df9-513b-4efe-87bc-918af7aaf73f.png)](https://youtu.be/bEgEipxV24c)
+[![PSTR](https://user-images.githubusercontent.com/91648013/221710444-0d643b77-8064-4041-b5ad-22ae99816b3b.png)](https://youtu.be/bEgEipxV24c)
 
 # Smart Contract Address
 https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
@@ -27,23 +27,23 @@ Polkastream contract
 
   14 passing (1m)
 ```
+
+
 # Solidproof.io Security and Tokenomics Audit
 https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf
 
-# Tokenomics
-PSTR is minted off Binance Smart Chain (BSC) with a maximum supply of one billion (1,000,000,000) tokens. 
+
+# Tokenomics and Utilities
+PSTR is minted off Binance Smart Chain (BSC) with a maximum supply of one billion (1,000,000,000) tokens.
+
+25% of the tokens are allocated to reward Polkastreamers for listening to their favorite music and podcasts, watching their favorite movies and TV shows, and/or socializing and playing their favorite games in the Polkaverse. 20% of the tokens are allocated toward operations and marketing. This includes funds for a Polkadot parachain auction, platform development and maintenance, legal, marketing, and on an as-needed basis. This allocation is activated after all fundraising revenue has been exhausted. 3% of the tokens are added to the PancakeSwap liquidity pool. 4% of the tokens are allocated to a wide range of fun community activity airdrops and incentives to keep Polkastreamers active and engaged on Polkastream's social media platforms. And finally, 2% of the tokens are allocated toward humanitarian efforts across the globe. The charities funded will be chosen by Polkastreamers through the Polkastream Decentralized Autonomous Organization (PDAO).
 
 For passive income, PSTR is built in with Automated Rewards Farming (ARF) to include:
 
 - A 4% fee is automatically applied to all transactions. 3% of that fee is distributed to holders and the remaining 1%, up to 50% of the max supply, is permanently burned.
 - After the 50% supply is burned, the fee reverts to 4% with all of it distributed to holders and 0% burned. 
 
-As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through Decentralized Autonomous Organization (DAO) proposals made by the Polkastream Community.
-
-
-# Allocations
-![PSTR Allocation Chart](https://user-images.githubusercontent.com/91648013/188272712-055fcd46-e1a7-4dd1-808f-948bcd198f76.png)
-
+As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through PDAO proposals made by the Polkastream Community.
 
 # Wallet Distributions
 The smart contract deploys one billion PSTR tokens to the following wallets, which are excluded from paying fees, receiving dividends, and a per transaction limit.
