@@ -1,8 +1,8 @@
-# Official Polkastream PSTR Smart Contract Address
+# $PSTR Smart Contract Address
 https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
 
-# Successful $PSTR Security and Tokenomics Audit
-[![IMAGE ALT TEXT HERE]https://youtu.be/bEgEipxV24c/0.jpg)](https://youtu.be/bEgEipxV24c)
+# Successful Security and Tokenomics Audit
+[![Watch the video](https://youtu.be/bEgEipxV24c/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/bEgEipxV24c)
 
 # Tokenomics
 PSTR is minted off Binance Smart Chain (BSC) with a maximum supply of one billion (1,000,000,000) tokens. 
