@@ -1,5 +1,5 @@
 
-[![Partnership Video](![Thumbnail](https://user-images.githubusercontent.com/91648013/221705637-c326dc00-fb64-48fc-a3f8-a8f29a867258.png))(https://youtu.be/bEgEipxV24c)
+[Partnership Video]![Thumbnail](https://user-images.githubusercontent.com/91648013/221705637-c326dc00-fb64-48fc-a3f8-a8f29a867258.png)](https://youtu.be/bEgEipxV24c)
 
 # PSTR Smart Contract Address
 https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
