@@ -1,4 +1,4 @@
-# Official Polkastream $PSTR Smart Contract Address
+# Official Polkastream PSTR Smart Contract Address
 https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
 
 # Successful $PSTR Security and Tokenomics Audit
