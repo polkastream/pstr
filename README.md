@@ -7,7 +7,7 @@
 
 
 # Smart Contract Address
-https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
+[bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8)
 
 # $ NPX Hardhat Test
 
@@ -36,7 +36,7 @@ Polkastream contract
 
 
 # Solidproof.io Security and Tokenomics Audit
-https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf
+[github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf](github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf)
 
 
 # Tokenomics
