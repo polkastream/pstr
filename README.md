@@ -78,7 +78,7 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 
 
 ### Questions?
-Please get in touch with us at info@polkastream.io or on Polkastream's [Discord server](https://discord.gg/polkastream).
+Please contact us at info@polkastream.io or on Polkastream's [Discord server](https://discord.gg/polkastream).
 
 
 # Vesting Contract Allocations and Terms (PENDING)
