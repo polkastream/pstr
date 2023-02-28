@@ -40,7 +40,7 @@ Polkastream contract
 
 
 # Tokenomics
-PSTR is minted off Binance Smart Chain (BSC) with a maximum supply of one billion (1,000,000,000) tokens.
+PSTR is minted off [Binance Smart Chain (BSC)](https://www.bnbchain.org/) with a maximum supply of one billion (1,000,000,000) tokens.
 
 For passive income, PSTR is built in with Automated Rewards Farming (ARF) to include:
 
