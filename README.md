@@ -67,7 +67,7 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 - **20% Operations and Marketing:** 0x37ECAaFBc289dA731B81c81A4454B108beD425a4  
 - **4% Community:** 0xf353B8Bb584c75900090e7F5e4309706e79d5385
 - **2% Charity:** 0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee
-- 
+
 
 ### Disclaimers
 - There is only one PSTR smart contract address on BSC and no other blockchains, including Polkadot. Here it is again: [bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8). Please always confirm it before making any investment decisions.
