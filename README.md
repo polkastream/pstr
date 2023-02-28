@@ -1,5 +1,4 @@
 # Project Description
-
 [Polkastream](https://polkastream.io/) is poised to be the next innovative addition to the [Polkadot](https://polkadot.network/) parachain system by building an integrated and intelligently monetized platform for the Web 3.0 streaming and gaming industry. On the Polkastream platform, users can listen to music and podcasts, watch movies and TV shows, as well as socialize and play games in the [Polkaverse](https://linktr.ee/polkaverse). In return, they are rewarded with the PSTR token, which is uniquely designed with incentivization and token-burning strategies for better rewards, long-term crypto market stability, and data security for all digital media users.
 
 
@@ -8,6 +7,7 @@
 
 # Smart Contract Address
 [bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8)
+
 
 # $ NPX Hardhat Test
 
@@ -49,8 +49,9 @@ For passive income, PSTR is built in with Automated Rewards Farming (ARF) to inc
 
 As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through Polkastream Decentralized Autonomous Organization (PDAO) proposals made by the Polkastream Community.
 
+
 # Utilities
-At a minimum, 51% of PSTR's total supply offers the following utilities to the Polkastreamer Community in addition to the 3% per transaction redistribution to all holders, and 50% total supply burn:
+At a minimum, 51% of PSTR's total supply offers the following utilities to the Polkastreamer Community:
 - Funds for a Polkadot parachain auction.
 - Streamer and gamer rewards for listening to music and podcasts, watching movies and TV shows, and/or socializing and playing over 40 games in the Polkaverse. 
 - Wide range of fun community activity airdrops and incentives to grow the Polkastream streaming and gaming platform userbase worldwide.
@@ -66,15 +67,21 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 - **20% Operations and Marketing:** 0x37ECAaFBc289dA731B81c81A4454B108beD425a4  
 - **4% Community:** 0xf353B8Bb584c75900090e7F5e4309706e79d5385
 - **2% Charity:** 0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee
+- 
+
+### Disclaimers
+- There is only one smart contract address on BSC and no other blockchains (including Polkadot) for the Polkastream utility and governance token, $PSTR. Here it is again: [bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8). Please always confirm it before making any investment decision: 
+
+Until official announcements are made, the $PSTR token cannot be bought or traded on any platform, whether it be a centralized exchange (CEX), a decentralized exchange (DEX), or a launchpad. The official Polkastream social media channels are accessible at polkastream.io, and all official announcements of investment and/or pre-sale opportunities will be made via these channels. Anyone claiming that you can purchase $PSTR otherwise is an impersonator. Be careful and aware of potential scammers. If you have any doubts, contact the Polkastream team at info@polkastream.io or one of our 15 Community Admins directly on our Discord server at discord.gg/polkastream for further clarification(s).
+
+The $PSTR tokenomics and company wallets are publicly shared and disclaimed on the Polkastream Github page. 100% of the $PSTR token supply in possession of the company will always be stored in the most secure, effective, air-gapped wallet that is currently available on the market – starting now. This should provide complete security and safety from hacks, as air-gapped wallets are never connected to the internet, and therefore, cannot be hacked digitally.
+
+
+### Questions?
+Please get in touch with us at info@polkastream.io or on Polkastream's [Discord server](https://discord.gg/polkastream).
 
 
 # Vesting Contract Allocations and Terms (Pending)
 - **10% Seed:** x% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a y-month cliff, followed by z months of external and linear (per block) unlock.
 - **10% Private:** x% of the total allocation is unlocked during TGE with a y-month cliff, followed by z months of external and linear unlock.
 - **22% Team and Advisors:** All of the tokens are locked for x days outright, followed by y% of the total allocation unlocking once every z days.
-
-# Disclaimers
-
-
-# Questions?
-Please get in touch with us at info@polkastream.io, or join our Discord server at https://discord.gg/polkastream.
