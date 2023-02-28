@@ -72,7 +72,7 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 ### Disclaimers
 - There is only one PSTR smart contract address on BSC and no other blockchains, including Polkadot. Here it is again: [bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8). Please always confirm it before making any investment decisions.
 
-- Until official announcements are made, the PSTR token cannot be bought or traded on any platform, whether it be a centralized exchange (CEX), a decentralized exchange (DEX), or a launchpad. The official Polkastream social media channels are accessible at https://polkastream.io, and all official announcements of investment and/or pre-sale opportunities will be made via the official channels. Anyone claiming that you can purchase PSTR otherwise is an impersonator. Be careful and aware of potential scammers. 
+- Until official announcements are made, the PSTR token cannot be bought or traded on any platform, whether it be a centralized exchange (CEX), a decentralized exchange (DEX), or a launchpad. The official Polkastream social media channels are accessible at https://polkastream.io, and all official announcements of investment and/or pre-sale opportunities will be made via the channels on website. Anyone claiming that you can purchase PSTR otherwise is an impersonator. Be careful and aware of potential scammers. 
 
 - 100% of the PSTR token supply in possession of the company will always be stored in the most secure, effective, air-gapped wallet that is currently available on the market - starting now. This should provide complete security and safety from hacks, as air-gapped wallets are never connected to the internet, and therefore, cannot be hacked digitally.
 
@@ -81,7 +81,7 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 Please get in touch with us at info@polkastream.io or on Polkastream's [Discord server](https://discord.gg/polkastream).
 
 
-# Vesting Contract Allocations and Terms (Pending)
+# Vesting Contract Allocations and Terms (PENDING)
 - **10% Seed:** x% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a y-month cliff, followed by z months of external and linear (per block) unlock.
 - **10% Private:** x% of the total allocation is unlocked during TGE with a y-month cliff, followed by z months of external and linear unlock.
 - **22% Team and Advisors:** All of the tokens are locked for x days outright, followed by y% of the total allocation unlocking once every z days.
