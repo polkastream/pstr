@@ -33,10 +33,8 @@ Polkastream contract
 https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf
 
 
-# Tokenomics and Utilities
+# Tokenomics
 PSTR is minted off Binance Smart Chain (BSC) with a maximum supply of one billion (1,000,000,000) tokens.
-
-25% of the tokens are allocated to reward Polkastreamers for listening to their favorite music and podcasts, watching their favorite movies and TV shows, and/or socializing and playing their favorite games in the Polkaverse. 20% of the tokens are allocated toward operations and marketing. This includes funds for a Polkadot parachain auction, platform development and maintenance, legal, marketing, and on an as-needed basis. 4% of the tokens are allocated to a wide range of fun community activity airdrops and incentives to keep Polkastreamers active and engaged on Polkastream's social media platforms. 2% of the tokens are allocated toward humanitarian efforts across the globe. The charities funded will be chosen by Polkastreamers through the Polkastream Decentralized Autonomous Organization (PDAO). And finally, 3% of the tokens are added to the PancakeSwap liquidity pool.
 
 For passive income, PSTR is built in with Automated Rewards Farming (ARF) to include:
 
@@ -44,6 +42,14 @@ For passive income, PSTR is built in with Automated Rewards Farming (ARF) to inc
 - After the 50% supply is burned, the fee reverts to 4% with all of it distributed to holders and 0% burned. 
 
 As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through PDAO proposals made by the Polkastream Community.
+
+# Utilities
+
+- Funds for a Polkadot parachain auction.
+- Streamer and gamer rewards for listening to music and podcasts, watching movies and TV shows, and/or socializing and playing over 40 games in the Polkaverse. 
+- Wide range of fun community activity airdrops and incentives to grow the Polkastream streaming and gaming platform userbase worldwide.
+- Allocation toward humanitarian efforts across the globe. The charities funded will be chosen by Polkastreamers through the Polkastream Decentralized Autonomous Organization (PDAO).
+
 
 # Wallet Distributions
 The smart contract deploys one billion PSTR tokens to the following wallets, which are excluded from paying fees, receiving dividends, and a per transaction limit.
