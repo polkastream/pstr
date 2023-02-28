@@ -66,7 +66,7 @@ Polkastream contract
 [github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf](https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf)
 
 
-### Disclaimers
+#### Disclaimers
 - There is only one PSTR smart contract address on BSC and no other blockchains, including Polkadot. Here it is again: [bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8). Please always confirm it before making any investment decisions.
 
 - Until official announcements are made, the PSTR token cannot be bought or traded on any platform, whether it be a centralized exchange (CEX), a decentralized exchange (DEX), or a launchpad. The official Polkastream social media channels are accessible at https://polkastream.io, and all announcements of investment and/or pre-sale opportunities will be made via those socials. Anyone claiming that you can purchase PSTR otherwise is an impersonator. Be careful and aware of potential scammers. 
@@ -74,7 +74,7 @@ Polkastream contract
 - 100% of the PSTR token supply in the company’s possession will always be stored in the most secure and effective air-gapped wallet currently available in the market. This should provide complete security and safety from hacks, as air-gapped wallets are never connected to the internet and, therefore, cannot be hacked digitally.
 
 
-### Questions?
+#### Questions?
 Contact us at info@polkastream.io, or join Polkastream's [Discord server](https://discord.gg/polkastream), and the core and admin team will be happy to answer your questions.
 
 
