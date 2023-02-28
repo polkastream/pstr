@@ -58,7 +58,7 @@ At a minimum, 51% of PSTR's total supply offers the following utilities to the P
 - Allocation toward humanitarian efforts across the globe and charities funded by Polkastreamers through the PDAO.
 
 
-# Wallet Distributions
+### Wallet Distributions
 The smart contract deploys one billion PSTR tokens to the following wallets, which are excluded from paying fees, receiving dividends, and a per transaction limit.
 - **42% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
 - **4% Public Sale**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
