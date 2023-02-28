@@ -55,7 +55,7 @@ At a minimum, 51% of PSTR's total supply offers the following utilities to the P
 - Funds for a Polkadot parachain auction.
 - Streamer and gamer rewards for listening to music and podcasts, watching movies and TV shows, and/or socializing and playing over 40 games in the Polkaverse. 
 - Wide range of fun community activity airdrops and incentives to grow the Polkastream streaming and gaming platform userbase worldwide.
-- Allocation toward humanitarian efforts across the globe. The charities funded will be chosen by Polkastreamers through the PDAO.
+- Allocation toward humanitarian efforts across the globe and charities funded by Polkastreamers through the PDAO.
 
 
 # Wallet Distributions
