@@ -44,7 +44,7 @@ For passive income, PSTR is built in with Automated Rewards Farming (ARF) to inc
 As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through PDAO proposals made by the Polkastream Community.
 
 # Utilities
-
+At a minimum, 51% of PSTR's total supply offers the following utilities to the Polkastreamer Community in addition to the 3% per transaction redistribution to all holders, and 50% total supply burn:
 - Funds for a Polkadot parachain auction.
 - Streamer and gamer rewards for listening to music and podcasts, watching movies and TV shows, and/or socializing and playing over 40 games in the Polkaverse. 
 - Wide range of fun community activity airdrops and incentives to grow the Polkastream streaming and gaming platform userbase worldwide.
