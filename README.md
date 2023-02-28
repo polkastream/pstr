@@ -1,4 +1,10 @@
+# Project Description
+
+[Polkastream](https://polkastream.io/) is poised to be the next innovative addition to the [Polkadot](https://polkadot.network/) parachain system by building an integrated and intelligently monetized platform for the Web 3.0 streaming and gaming industry. On the Polkastream platform, users can listen to music and podcasts, watch movies and TV shows, as well as socialize and play games in the [Polkaverse(https://linktr.ee/polkaverse). In return, they are rewarded with the $PSTR token, which is uniquely designed with incentivization and token-burning strategies for better rewards, long-term crypto market stability, and data security for all digital media users.
+
+
 [![PSTR](https://user-images.githubusercontent.com/91648013/221710444-0d643b77-8064-4041-b5ad-22ae99816b3b.png)](https://youtu.be/bEgEipxV24c)
+
 
 # Smart Contract Address
 https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8
@@ -41,14 +47,14 @@ For passive income, PSTR is built in with Automated Rewards Farming (ARF) to inc
 - A 4% fee is automatically applied to all transactions. 3% of that fee is distributed to holders and the remaining 1%, up to 50% of the max supply, is permanently burned.
 - After the 50% supply is burned, the fee reverts to 4% with all of it distributed to holders and 0% burned. 
 
-As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through PDAO proposals made by the Polkastream Community.
+As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through Polkastream Decentralized Autonomous Organization (PDAO) proposals made by the Polkastream Community.
 
 # Utilities
 At a minimum, 51% of PSTR's total supply offers the following utilities to the Polkastreamer Community in addition to the 3% per transaction redistribution to all holders, and 50% total supply burn:
 - Funds for a Polkadot parachain auction.
 - Streamer and gamer rewards for listening to music and podcasts, watching movies and TV shows, and/or socializing and playing over 40 games in the Polkaverse. 
 - Wide range of fun community activity airdrops and incentives to grow the Polkastream streaming and gaming platform userbase worldwide.
-- Allocation toward humanitarian efforts across the globe. The charities funded will be chosen by Polkastreamers through the Polkastream Decentralized Autonomous Organization (PDAO).
+- Allocation toward humanitarian efforts across the globe. The charities funded will be chosen by Polkastreamers through the PDAO.
 
 
 # Wallet Distributions
@@ -66,6 +72,9 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 - **10% Seed:** x% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a y-month cliff, followed by z months of external and linear (per block) unlock.
 - **10% Private:** x% of the total allocation is unlocked during TGE with a y-month cliff, followed by z months of external and linear unlock.
 - **22% Team and Advisors:** All of the tokens are locked for x days outright, followed by y% of the total allocation unlocking once every z days.
+
+# Disclaimers
+
 
 # Questions?
 Please get in touch with us at info@polkastream.io, or join our Discord server at https://discord.gg/polkastream.
