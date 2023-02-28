@@ -74,7 +74,7 @@ The smart contract deploys one billion PSTR tokens to the following wallets, whi
 
 - Until official announcements are made, the PSTR token cannot be bought or traded on any platform, whether it be a centralized exchange (CEX), a decentralized exchange (DEX), or a launchpad. The official Polkastream social media channels are accessible at https://polkastream.io, and all official announcements of investment and/or pre-sale opportunities will be made via the socials on the website. Anyone claiming that you can purchase PSTR otherwise is an impersonator. Be careful and aware of potential scammers. 
 
-- 100% of the PSTR token supply in possession of the company will always be stored in the most secure and effective, air-gapped wallet that is currently available on the market - starting now. This should provide complete security and safety from hacks, as air-gapped wallets are never connected to the internet and therefore, cannot be hacked digitally.
+- 100% of the PSTR token supply in possession of the company will always be stored in the most secure and effective air-gapped wallet that is currently available in the market. This should provide complete security and safety from hacks, as air-gapped wallets are never connected to the internet and therefore, cannot be hacked digitally.
 
 
 ### Questions?
