@@ -36,7 +36,7 @@ Polkastream contract
 
 
 # Solidproof.io Security and Tokenomics Audit
-[github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf](github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf)
+[github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf](https://github.com/solidproof/projects/blob/main/Polkastream/SmartContract_Audit_Solidproof_Polkastream.pdf)
 
 
 # Tokenomics
