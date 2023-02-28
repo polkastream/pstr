@@ -6,7 +6,7 @@ PSTR is the utility token of the Polkastream platform, where users can earn imme
 
 [![PSTR](https://user-images.githubusercontent.com/91648013/221710444-0d643b77-8064-4041-b5ad-22ae99816b3b.png)](https://youtu.be/bEgEipxV24c)
 
-Most importantly, PSTR is the governance token of the Polkastream Decentralized Autonomous Organization (PDAO), where users can create proposals and vote on the current ones using PSTR to make any changes to the Polkastream Web 3.0 OTT (over-the-top) streaming and Metaverse gaming protocol.
+Most importantly, PSTR is the governance token of the Polkastream Decentralized Autonomous Organization (PDAO), where users can create proposals and vote on the current ones using PSTR in order to make any changes to the Polkastream Web 3.0 OTT (over-the-top) streaming and Metaverse gaming protocol.
 
 
 # Smart Contract Address
