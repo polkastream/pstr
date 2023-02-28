@@ -2,10 +2,11 @@
 [Polkastream](https://polkastream.io/) is poised to be the next innovative addition to the [Polkadot](https://polkadot.network/) parachain system by building an integrated and intelligently monetized platform for the Web 3.0 streaming and gaming industry. On the Polkastream platform, users can listen to music and podcasts, watch movies and TV shows, as well as socialize and play games in the [Polkaverse](https://linktr.ee/polkaverse). In return, they are rewarded with the PSTR token, which is uniquely designed with incentivization and token-burning strategies for better rewards, long-term crypto market stability, and data security for all digital media users.
 
 # Token Utilities
-PSTR is the utility token of the Polkastream platform, where users can earn immersive rewards by listening to music and podcasts, watching movies and TV shows, and/or socializing and playing over 40 games in the Polkaverse. PSTR can also be staked in one of the various staking programs for an APY interest. Most importantly, PSTR is the governance token of the Polkastream Decentralized Autonomous Organization (PDAO), where users can create proposals and vote on the current ones using PSTR to make any changes to the Polkastream Web 3.0 OTT (over-the-top) streaming and Metaverse gaming protocol.
-
+PSTR is the utility token of the Polkastream platform, where users can earn immersive rewards by listening to music and podcasts, watching movies and TV shows, and/or socializing and playing over 40 games in the Polkaverse. PSTR can also be staked in one of the various staking programs for an APY interest. 
 
 [![PSTR](https://user-images.githubusercontent.com/91648013/221710444-0d643b77-8064-4041-b5ad-22ae99816b3b.png)](https://youtu.be/bEgEipxV24c)
+
+Most importantly, PSTR is the governance token of the Polkastream Decentralized Autonomous Organization (PDAO), where users can create proposals and vote on the current ones using PSTR to make any changes to the Polkastream Web 3.0 OTT (over-the-top) streaming and Metaverse gaming protocol.
 
 
 # Smart Contract Address
