@@ -22,7 +22,7 @@ As an added token security and stability feature, PSTR has a limit of one millio
 
 
 # Wallet Distributions
-The smart contract deploys one billion PSTR tokens to the following wallets, which are excluded from paying fees, receiving dividends, and a per transaction limit.
+The smart contract mints one billion BEP-20 PSTR tokens and distributes them to the following Company wallets, which are excluded from paying fees, receiving dividends, and a per transaction limit:
 - **42% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
 - **4% Public Sale**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
 - **3% Liquidity Pool:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
@@ -71,7 +71,7 @@ Polkastream contract
 
 - Until official announcements are made, the PSTR token cannot be bought or traded on any platform, whether it be a centralized exchange (CEX), a decentralized exchange (DEX), or a launchpad. The official Polkastream social media channels are accessible at https://polkastream.io, and all announcements of investment and/or pre-sale opportunities will be made via those socials. Anyone claiming that you can purchase PSTR otherwise is an impersonator. Be careful and aware of potential scammers. 
 
-- 100% of the PSTR token supply in the company’s possession will always be stored in the most secure and effective air-gapped wallet currently available in the market. This should provide complete security and safety from hacks, as air-gapped wallets are never connected to the internet and, therefore, cannot be hacked digitally.
+- 100% of the PSTR token supply in the Company’s possession will always be stored in the most secure and effective air-gapped wallet currently available in the market. This should provide complete security and safety from hacks, as air-gapped wallets are never connected to the internet and, therefore, cannot be hacked digitally.
 
 
 #### Questions?
