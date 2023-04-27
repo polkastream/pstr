@@ -80,5 +80,5 @@ Polkastream contract
 - 100% of the PSTR token supply in the Company’s possession will always be stored in the most secure and effective air-gapped wallet currently available in the market. This should provide complete security and safety from hacks, as air-gapped wallets are never connected to the internet and, therefore, cannot be hacked digitally.
 
 
-#### Questions?
+# Questions?
 Contact us at info@polkastream.io, or join Polkastream's [Discord server](https://discord.gg/polkastream), and the core and admin team will be happy to answer your questions.
