@@ -78,7 +78,7 @@ Polkastream contract
 Contact us at info@polkastream.io, or join Polkastream's [Discord server](https://discord.gg/polkastream), and the core and admin team will be happy to answer your questions.
 
 
-# Vesting Contract Allocations and Terms (PENDING)
-- **10% Seed:** x% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a y-month cliff, followed by z months of external and linear (per block) unlock.
-- **10% Private:** x% of the total allocation is unlocked during TGE with a y-month cliff, followed by z months of external and linear unlock.
-- **22% Team and Advisors:** All of the tokens are locked for x days outright, followed by y% of the total allocation unlocking once every z days.
+# Vesting Contract Allocations and Terms
+- **10% Seed:** 10% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a one-month cliff, followed by 12 months of external and linear (per block) unlock.
+- **10% Private:** 20% of the total allocation is unlocked during TGE with a one-month cliff, followed by 6 months of external and linear unlock.
+- **22% Team and Advisors:** All of the tokens are locked for 180 days outright, followed by 2.5% of the total allocation unlocking once every 30 days.
