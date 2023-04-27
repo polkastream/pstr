@@ -32,7 +32,7 @@ The smart contract mints one billion BEP-20, PSTR tokens and distributes them to
 - **2% Charity:** 0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee
 
 
-# Vesting Contract Allocations and Terms
+### Vesting Contract Allocations and Terms
 - **10% Seed:** 10% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a one-month cliff, followed by 12 months of external and linear (per block) unlock.
 - **10% Private:** 20% of the total allocation is unlocked during the PSTR TGE with a one-month cliff, followed by 6 months of external and linear unlock.
 - **22% Team and Advisors:** All of the tokens are locked for 180 days outright, followed by 2.5% of the total allocation unlocking once every 30 days.
