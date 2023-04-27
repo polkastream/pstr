@@ -30,7 +30,7 @@ The smart contract mints one billion BEP-20, PSTR tokens and distributes them to
 - **20% Operations and Marketing:** 0x37ECAaFBc289dA731B81c81A4454B108beD425a4  
 - **4% Community:** 0xf353B8Bb584c75900090e7F5e4309706e79d5385
 - **2% Charity:** 0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee
-- 
+
 
 # Vesting Contract Allocations and Terms
 - **10% Seed:** 10% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a one-month cliff, followed by 12 months of external and linear (per block) unlock.
