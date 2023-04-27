@@ -24,19 +24,15 @@ As an added token security and stability feature, PSTR has a limit of one millio
 # Wallet Distributions
 The smart contract mints one billion BEP-20, PSTR tokens and distributes them to the following Company wallets, which are excluded from paying fees, receiving dividends, and a per transaction limit:
 - **42% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
+    - **10% Seed:** 10% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a one-month cliff, followed by 12 months of external and linear (per block) unlock.
+    - **10% Private:** 20% of the total allocation is unlocked during the PSTR TGE with a one-month cliff, followed by 6 months of external and linear unlock.
+    - **22% Team and Advisors:** All of the tokens are locked for 180 days outright, followed by 2.5% of the total allocation unlocking once every 30 days.
 - **4% Public Sale**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
 - **3% Liquidity Pool:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
 - **25% Rewards:** 0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea
 - **20% Operations and Marketing:** 0x37ECAaFBc289dA731B81c81A4454B108beD425a4  
 - **4% Community:** 0xf353B8Bb584c75900090e7F5e4309706e79d5385
 - **2% Charity:** 0x8A4904c92eA3F6508f4b7bA26537BFe31B09A5ee
-
-
-### Vesting Contract Allocations and Terms
-- **10% Seed:** 10% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a one-month cliff, followed by 12 months of external and linear (per block) unlock.
-- **10% Private:** 20% of the total allocation is unlocked during the PSTR TGE with a one-month cliff, followed by 6 months of external and linear unlock.
-- **22% Team and Advisors:** All of the tokens are locked for 180 days outright, followed by 2.5% of the total allocation unlocking once every 30 days.
-
 
 # Smart Contract Address
 [bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8)
