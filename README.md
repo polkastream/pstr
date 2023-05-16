@@ -1,13 +1,11 @@
 # Project Description
-[Polkastream](https://polkastream.io/) is poised to be the next innovative addition to Web 3.0 by building an integrated and intelligently monetized platform for the [over-the-top (OTT)](https://www.endavomedia.com/what-is-ott/#:~:text=OTT%20Over-the-Top,real%20time%20over%20the%20internet.) streaming and Metaverse gaming market. On the Polkastream platform, users can listen to music and podcasts, watch movies and TV shows, as well as socialize and play games in the [Polkaverse](https://linktr.ee/polkaverse). In return, they are rewarded with the PSTR token, which is uniquely designed with incentivization and token-burning strategies for better rewards, long-term crypto market stability, and data security for all digital media users.
+[Polkastream](https://polkastream.io/) is poised to be the next innovative addition to Web 3.0 by building an integrated and intelligently monetized platform for the [OTT](https://www.endavomedia.com/what-is-ott/#:~:text=OTT%20Over-the-Top,real%20time%20over%20the%20internet.) streaming and [Metaverse](https://about.meta.com/what-is-the-metaverse/) gaming market. On the Polkastream platform, users can listen to music and podcasts, watch movies and TV shows, as well as socialize and play games in the [Polkaverse](https://linktr.ee/polkaverse). In return, they are rewarded with the PSTR token, which is uniquely designed with incentivization and token-burning strategies for better rewards, long-term crypto market stability, and data security for all digital media users.
 
 
 # Token Utility
-PSTR is the utility token of the Polkastream platform, where users can earn immersive rewards by listening to music and podcasts, watching movies and TV shows, as well as socializing and playing over 40 games in the Polkaverse. PSTR can also be staked in one of the various staking programs for an annual percentage yield (APY) interest. 
-
-[![PSTR](https://user-images.githubusercontent.com/91648013/221710444-0d643b77-8064-4041-b5ad-22ae99816b3b.png)](https://youtu.be/bEgEipxV24c)
-
-Most importantly, PSTR is the governance token of the Polkastream Decentralized Autonomous Organization (PDAO), where users can create proposals and vote on the current ones using PSTR in order to make any changes to the Polkastream Web 3.0 over-the-top (OTT) streaming and Metaverse gaming protocol.
+- Users can earn immersive rewards by listening to music and podcasts, watching movies and TV shows, and socializing and playing over 40 games in the Polkaverse.
+- PSTR can be staked in one of the various staking programs for an annual percentage yield (APY) interest.
+- As the governance token of the Polkastream Decentralized Autonomous Organization (PDAO), users can use PSTR to create proposals and vote on the current ones in order to make any changes to the Polkastream Web 3.0 streaming and gaming protocol.
 
 
 # Tokenomics
@@ -16,7 +14,7 @@ PSTR is minted on [Binance Smart Chain (BSC)](https://www.bnbchain.org/) with an
 For passive income, PSTR is built with an Automated Rewards Farming (ARF) feature that includes:
 
 - A 4% fee is automatically applied to all transactions, from which 3% is distributed to holders, and the remaining 1%, up to 50% of the max supply, is permanently burned.
-- After 50% of the initial maximum supply is burned, the fee remains 4% with all of it distributed to holders and 0% burned.
+- After 50% of the maximum supply is burned, the fee remains 4% with all of it distributed to holders and 0% burned.
 
 As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through PDAO proposals made by the Polkastream Community.
 
@@ -26,7 +24,7 @@ The smart contract mints one billion BEP-20, PSTR tokens and distributes them to
 - **42% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
     - **10% Presale:** 10% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a one-month cliff, followed by 12 months of external and linear (per block) unlock.
     - **22% Team and Advisors:** All of the tokens are locked for 180 days outright, followed by 2.5% of the total allocation unlocking once every 30 days.
-    - **10% Treasury:** All of the tokens are locked for 5 years.
+    - **10% Treasury:** All of the tokens are locked for 8 years.
 - **4% Public Sale**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
 - **3% Liquidity Pool:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
 - **25% Rewards:** 0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea
