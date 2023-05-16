@@ -69,7 +69,7 @@ Polkastream contract
 
 
 # Disclaimers
-- There is only one PSTR smart contract address on BSC and no other blockchains, including Polkadot. Here it is again: [bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8). Please always confirm it before making any investment decisions.
+- There is only one PSTR smart contract address on BSC and no other blockchains. Here it is again: [bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8). Please always confirm it before making any investment decisions.
 
 - Until official announcements are made, the PSTR token cannot be bought or traded on any platform, whether it be a centralized exchange (CEX), a decentralized exchange (DEX), or a launchpad. The official Polkastream social media channels are accessible at https://polkastream.io, and all announcements of investment and/or pre-sale opportunities will be made via those socials. Anyone claiming that you can purchase PSTR otherwise is an impersonator. Be careful and aware of potential scammers. 
 
