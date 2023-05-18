@@ -24,7 +24,7 @@ The smart contract mints one billion BEP-20, PSTR tokens and distributes them to
 - **42% Vesting Contract:** 0x0beF5f7E292fB8523256415941D097Aa479C1BA7
     - **10% Presale:** 10% of the total allocation is unlocked during the PSTR Token Generation Event (TGE) with a one-month cliff, followed by 12 months of external and linear (per block) unlock.
     - **22% Team and Advisors:** All of the tokens are locked for 180 days outright, followed by 2.5% of the total allocation unlocking once every 30 days.
-    - **10% Treasury:** All of the tokens are locked for 8 years.
+    - **10% Treasury:** All of the tokens are locked for 4 years.
 - **4% Public Sale**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
 - **3% Liquidity Pool:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
 - **25% Rewards:** 0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea
