@@ -11,10 +11,10 @@
 # Tokenomics
 PSTR is minted on [Binance Smart Chain (BSC)](https://www.bnbchain.org/) with an initial maximum supply of one billion (1,000,000,000) tokens.
 
-For passive income, PSTR is built with an Automated Rewards Farming (ARF) feature that includes:
+PSTR is built with an Automated Farming (AF) feature that includes:
 
 - A 4% fee is automatically applied to all transactions, from which 3% is distributed to holders, and the remaining 1%, up to 50% of the max supply, is permanently burned.
-- After 50% of the maximum supply is burned, the fee remains 4% with all of it distributed to holders and 0% burned.
+- After 50% of the maximum supply is burned, the fee remains at 4% with all of it distributed to holders and 0% burned.
 
 As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through PDAO proposals made by the Polkastream Community.
 
