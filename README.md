@@ -18,7 +18,7 @@ The smart contract mints one billion BEP-20, PSTR tokens and distributes them to
     - **22% Team and Advisors:** All of the tokens are locked for 180 days, followed by 2.5% of the total allocation unlocking once every 30 days.
     - **10% Treasury:** All of the tokens are locked for four years, followed by 10% of the total allocation unlocking once every 30 days.
 - **4% Public Sale**: 0x0F18A35beee3604bDAa28A45e299d166f037116A
-- **3% Liquidity Pool:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
+- **3% Liquidity:** 0x5a5E2777dD1e3ae0c39521fEb49012cA3845D48F
 - **25% Rewards:** 0xEe9143f5Efc1bA0315aE0cADc148843e4D7920Ea
 - **20% Operations and Marketing:** 0x37ECAaFBc289dA731B81c81A4454B108beD425a4  
 - **4% Community:** 0xf353B8Bb584c75900090e7F5e4309706e79d5385
