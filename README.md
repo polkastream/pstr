@@ -10,6 +10,11 @@ The PSTR token is minted on Binance Smart Chain (BSC) with an initial maximum su
 
 As an added token security and stability feature, PSTR has a limit of one million (1,000,000) tokens per transaction. This anti-slippage transaction limit is updateable through Polkastream Decentralized Autonomous Organization (PDAO) proposals made by the Polkastream Community.
 
+# Utilities
+- Users can earn immersive rewards through Polkastream’s Active Audio and Video Rewards (AAVR) program by listening to music and podcasts, watching movies and TV shows, and socializing and playing over 40 games in the Polkaverse. 
+- PSTR is used to trade the Polkaverse in-game NFT assets.
+- PSTR can be staked in one of the various staking programs for an APY interest.
+- As the governance token of the PDAO, users can use PSTR to create proposals and vote on the current ones to make any changes to the Polkastream protocol.
 
 # Smart Contract Address
 [bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8](https://bscscan.com/address/0x3cdd71d99cb393928b74d549d4cb0a6ffe0a60a8)
